@@ -1,0 +1,160 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.3em;
+  background-color: rgb(67, 66, 66);
+  color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width of the page */
+    z-index: 1000; /* Ensures the navbar stays on top */
+
+}
+
+.forgot-btn{
+  text-decoration: none;
+  text-decoration: none;
+  position: relative;
+  top: 8px;
+  color: #4CAF50;
+
+}
+
+.forgot-btn1 {
+  text-decoration: none;
+  position: relative;
+  top: 8px;
+  color: #4CAF50;
+
+
+}
+
+.signup-btn{
+  text-decoration: none;
+  position: relative;
+  top: 15px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 0.7em 2em;
+  font-size: 1em;
+}
+
+
+.logo {
+  font-size: 1.5em;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1em;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.login-btn {
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 0.7em 2em;
+  font-size: 1em;
+  cursor: pointer;
+  position: relative;
+  right : 20px;
+}
+
+.login-form {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color: #fff;
+  padding: 2em;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-form.show {
+  display: block;
+}
+
+.switch {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1em;
+}
+
+.switch button {
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 0.5em 1em;
+  font-size: 0.8em;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.switch button.active {
+  background-color: #3e8e41;
+}
+
+form input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form button {
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 1em;
+  width: 100%;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #45a049;
+}
+
+.signup-container, .account-container, .home-container {
+  display: none;
+  padding: 3em;
+  position: relative;
+  margin-top: 4em;
+  background-color: #f2f2f2;
+  border: 1px solid #ddd;
+  width: 300px;
+  margin: auto;
+}
+
+
+.heart-background {
+  background-image: url('heart.jpg');
+  background-size: cover;    /* Ensures the image covers the entire background */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  width: 100%;               /* Full width of the page */
+  height: 100%;              /* Full height of the page */
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 60%;
+}

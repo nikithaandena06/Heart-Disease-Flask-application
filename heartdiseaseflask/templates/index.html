@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="homepage.html">
+</head>
+<body>
+    <div class="heart-background"></div>
+    <nav>
+        <div class="logo">Heart Disease Prediction</div>
+        <div class="sidebar">
+            <ul>
+                <!-- Sidebar content (can be added here) -->
+            </ul>
+        </div>
+        <div class="login-container">
+            <button class="login-btn">Login</button>
+            <div class="login-form">
+                <div class="switch">
+                    <button class="user-login-btn active">User Login</button>
+                    <button class="admin-login-btn">Admin Login</button>
+                </div>
+                <!-- User login form -->
+                <form id="user-login-form" action="/homepage" method="POST">
+                    <input type="email" id="user-email" placeholder="User Email" required>
+                    <input type="password" id="user-password" placeholder="Password" required>
+                    <button type="submit" href="homepage.html">Login</button>
+                    <p id="user-error-msg" class="error-msg"></p>
+                    <a href="#" class="forgot-btn1">Forgot Password?</a>
+                </form>
+                <!-- Admin login form -->
+                <form id="admin-login-form" action="/homepage" method="POST" style="display:none;">
+                    <input type="email" id="admin-email" placeholder="Admin Email" required>
+                    <input type="password" id="admin-password" placeholder="Password" required>
+                    <button type="submit" href="homepage.html">Login</button>
+                    <p id="admin-error-msg" class="error-msg"></p>
+                    <a href="#" class="forgot-btn">Forgot Password?</a>
+                </form>
+                <p>New user? <a href="#" class="signup-btn">Create an account</a></p>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sign up container -->
+    <div class="signup-container" style="display:none;">
+        <h2>Sign Up</h2>
+        <div class="switch">
+            <button class="user-signup-btn active">User Sign Up</button>
+            <button class="admin-signup-btn">Admin Sign Up</button>
+        </div>
+        <form id="user-signup-form" action="/homepage" method="POST">
+            <input type="text" id="signup-name" placeholder="Name of the User" required>
+            <input type="email" id="signup-email" placeholder="User Email" required>
+            <input type="password" id="signup-password" placeholder="Password" required>
+            <p id="signup-error-msg" class="error-msg"></p>
+            <button type="submit" href="homepage.html">Sign Up</button>
+        </form>
+        <form id="admin-signup-form" action="/homepage" method="POST" style="display:none;">
+            <input type="text" id="admin-signup-name" placeholder="Name of the Admin" required>
+            <input type="email" id="admin-signup-email" placeholder="Admin Email" required>
+            <input type="password" id="admin-signup-password" placeholder="Password" required>
+            <p id="admin-signup-error-msg" class="error-msg"></p>
+            <button type="submit" href="homepage.html">Sign Up</button>
+        </form>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
